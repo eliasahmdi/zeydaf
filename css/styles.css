@@ -120,12 +120,52 @@ button:hover {
 }
 
 
+
+/* MEDIA QUERIES */
+
+/* For Tablet Devices (768px and below) */
+@media (max-width: 768px) {
+    .product-showcase {
+        flex-direction: column; /* Stack the items vertically */
+    }
+
+    .product-item {
+        flex: 1 1 100%; /* Full width on smaller screens */
+        max-width: 100%;
+    }
+
+    .hero {
+        padding: 20px 0;
+    }
+}
+
+/* For Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .hero {
+        padding: 10px 0;
+    }
+
+    .product-showcase {
+        flex-direction: column;
+    }
+
+    .product-item {
+        flex: 1 1 100%; /* Full width on mobile */
+        max-width: 100%;
+    }
+
+    .prev, .next {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
 /* Product Showcase */
+
 .product-showcase {
     display: flex;
+    flex-wrap: wrap; /* Allows items to wrap */
     justify-content: space-around;
-    padding: 50px;
-    background-color: #f8f8f8;
+    gap: 20px; /* Space between products */
 }
 
 .product {
@@ -137,39 +177,6 @@ button:hover {
     width: 150px;
     height: auto;
 }
-/* Media query for mobile screens */
-@media only screen and (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        padding: 20px 0;
-    }
-
-    .gallery-container-column {
-        width: 100%; /* Make gallery full-width on mobile */
-        height: auto; /* Let the height adjust based on content */
-    }
-
-    .gallery-slide-column img {
-        width: 100%;
-        height: auto; /* Ensure images maintain aspect ratio */
-    }
-
-    /* Buttons can be made smaller or repositioned if needed */
-    .prev-column, .next-column {
-        font-size: 16px;
-        padding: 6px;
-    }
-
-    /* Adjust the position of buttons for better mobile UX */
-    .prev-column {
-        bottom: 5px;
-    }
-
-    .next-column {
-        top: 5px;
-    }
-}
-
 /* Footer */
 .main-footer {
     background-color: #333;
